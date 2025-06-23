@@ -28,17 +28,17 @@ const StoreCard: React.FC<StoreCardProps> = ({ store }) => {
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200">
       <CardContent className="p-0">
-        <div className="flex">
-          <div className="w-48 h-32 flex-shrink-0">
+        <div className="flex flex-col sm:flex-row">
+          <div className="w-full sm:w-48 h-48 sm:h-32 flex-shrink-0">
             <img
               src={store.image}
               alt={store.name}
-              className="w-full h-full object-cover rounded-l-lg"
+              className="w-full h-full object-cover rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
             />
           </div>
           <div className="flex-1 p-4">
-            <div className="flex justify-between items-start mb-2">
-              <div>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+              <div className="mb-2 sm:mb-0">
                 <Link
                   to={`/stores/${store.id}`}
                   className="text-lg font-semibold text-gray-900 hover:text-red-600 transition-colors"
@@ -61,17 +61,17 @@ const StoreCard: React.FC<StoreCardProps> = ({ store }) => {
             />
             
             <div className="mt-2 space-y-1 text-sm text-gray-600">
-              <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-1" />
-                {store.address}
+              <div className="flex items-start">
+                <MapPin className="h-4 w-4 mr-1 mt-0.5 flex-shrink-0" />
+                <span className="break-words">{store.address}</span>
               </div>
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-1" />
-                {store.phone}
+                <Phone className="h-4 w-4 mr-1 flex-shrink-0" />
+                <span>{store.phone}</span>
               </div>
               <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-1" />
-                {store.hours}
+                <Clock className="h-4 w-4 mr-1 flex-shrink-0" />
+                <span>{store.hours}</span>
               </div>
             </div>
             

@@ -37,15 +37,15 @@ const Stores = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Mattress Stores in Los Angeles</h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Mattress Stores in Los Angeles</h1>
           <p className="text-gray-600">Find the perfect place to buy your next mattress</p>
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-white rounded-lg shadow p-6 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
+        <div className="bg-white rounded-lg shadow p-4 sm:p-6 mb-6 sm:mb-8">
+          <div className="flex flex-col gap-4">
             <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
@@ -59,44 +59,46 @@ const Stores = () => {
               </div>
             </div>
             
-            <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="w-48">
-                <SelectValue placeholder="Sort by" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="rating">Highest Rated</SelectItem>
-                <SelectItem value="reviews">Most Reviews</SelectItem>
-                <SelectItem value="name">Name A-Z</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Select value={sortBy} onValueChange={setSortBy}>
+                <SelectTrigger className="w-full sm:w-48">
+                  <SelectValue placeholder="Sort by" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="rating">Highest Rated</SelectItem>
+                  <SelectItem value="reviews">Most Reviews</SelectItem>
+                  <SelectItem value="name">Name A-Z</SelectItem>
+                </SelectContent>
+              </Select>
 
-            <Select value={priceFilter} onValueChange={setPriceFilter}>
-              <SelectTrigger className="w-48">
-                <SelectValue placeholder="Price Range" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Prices</SelectItem>
-                <SelectItem value="$">$ (Budget)</SelectItem>
-                <SelectItem value="$$">$$ (Mid-range)</SelectItem>
-                <SelectItem value="$$$">$$$ (Premium)</SelectItem>
-              </SelectContent>
-            </Select>
+              <Select value={priceFilter} onValueChange={setPriceFilter}>
+                <SelectTrigger className="w-full sm:w-48">
+                  <SelectValue placeholder="Price Range" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Prices</SelectItem>
+                  <SelectItem value="$">$ (Budget)</SelectItem>
+                  <SelectItem value="$$">$$ (Mid-range)</SelectItem>
+                  <SelectItem value="$$$">$$$ (Premium)</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
         </div>
 
         {/* Results */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4">
           <p className="text-gray-600">
             Showing {sortedStores.length} of {sampleStores.length} stores
           </p>
-          <Button variant="outline" className="flex items-center space-x-2">
+          <Button variant="outline" className="flex items-center space-x-2 w-full sm:w-auto">
             <MapPin className="h-4 w-4" />
             <span>View Map</span>
           </Button>
         </div>
 
         {/* Store List */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {sortedStores.map((store) => (
             <StoreCard key={store.id} store={store} />
           ))}
