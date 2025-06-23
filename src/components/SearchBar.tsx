@@ -17,7 +17,7 @@ const SearchBar = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <Input
                 type="text"
-                placeholder="mattress stores, sleep centers..."
+                placeholder="dentists, orthodontists, oral surgeons..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 h-12 text-base sm:text-lg"
@@ -37,7 +37,7 @@ const SearchBar = () => {
             </div>
           </div>
         </div>
-        <Button className="h-12 px-8 bg-red-600 hover:bg-red-700 text-base sm:text-lg font-medium w-full sm:w-auto sm:self-start">
+        <Button className="h-12 px-8 bg-blue-600 hover:bg-blue-700 text-base sm:text-lg font-medium w-full sm:w-auto sm:self-start">
           Search
         </Button>
       </div>

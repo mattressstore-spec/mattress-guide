@@ -14,9 +14,9 @@ const Blog = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Sleep Better Blog</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Dental Health Blog</h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert tips, guides, and insights to help you find the perfect mattress and improve your sleep quality.
+            Expert tips, guides, and insights to help you maintain optimal oral health and find the best dental care.
           </p>
         </div>
 
@@ -30,12 +30,12 @@ const Blog = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4 sm:p-6">
-                  <Badge className="bg-red-100 text-red-800 mb-3">
+                  <Badge className="bg-blue-100 text-blue-800 mb-3">
                     {article.category}
                   </Badge>
                   
                   <Link to={`/blog/${article.id}`}>
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 hover:text-red-600 transition-colors">
+                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
                       {article.title}
                     </h2>
                   </Link>

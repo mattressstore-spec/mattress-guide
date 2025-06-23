@@ -39,8 +39,8 @@ const Stores = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         <div className="mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Mattress Stores in Los Angeles</h1>
-          <p className="text-gray-600">Find the perfect place to buy your next mattress</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Dentists in Los Angeles</h1>
+          <p className="text-gray-600">Find the perfect dental practice for your oral health needs</p>
         </div>
 
         {/* Search and Filters */}
@@ -51,7 +51,7 @@ const Stores = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                 <Input
                   type="text"
-                  placeholder="Search stores or mattress types..."
+                  placeholder="Search dentists or specialties..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10"
@@ -77,7 +77,7 @@ const Stores = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Prices</SelectItem>
-                  <SelectItem value="$">$ (Budget)</SelectItem>
+                  <SelectItem value="$">$ (Budget-Friendly)</SelectItem>
                   <SelectItem value="$$">$$ (Mid-range)</SelectItem>
                   <SelectItem value="$$$">$$$ (Premium)</SelectItem>
                 </SelectContent>
@@ -89,7 +89,7 @@ const Stores = () => {
         {/* Results */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4">
           <p className="text-gray-600">
-            Showing {sortedStores.length} of {sampleStores.length} stores
+            Showing {sortedStores.length} of {sampleStores.length} dental practices
           </p>
           <Button variant="outline" className="flex items-center space-x-2 w-full sm:w-auto">
             <MapPin className="h-4 w-4" />
@@ -106,7 +106,7 @@ const Stores = () => {
 
         {sortedStores.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg mb-4">No stores found matching your criteria</p>
+            <p className="text-gray-500 text-lg mb-4">No dental practices found matching your criteria</p>
             <Button 
               onClick={() => {
                 setSearchTerm('');

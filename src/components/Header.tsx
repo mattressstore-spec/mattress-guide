@@ -15,10 +15,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Star className="h-5 w-5 text-white fill-current" />
               </div>
-              <span className="text-xl font-bold text-gray-900">LA Mattress</span>
+              <span className="text-xl font-bold text-gray-900">LA Dental</span>
             </Link>
           </div>
 
@@ -27,24 +27,24 @@ const Header = () => {
             <nav className="flex space-x-6">
               <Link 
                 to="/" 
-                className={`text-sm font-medium transition-colors hover:text-red-600 ${
-                  location.pathname === '/' ? 'text-red-600' : 'text-gray-700'
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                  location.pathname === '/' ? 'text-blue-600' : 'text-gray-700'
                 }`}
               >
                 Home
               </Link>
               <Link 
                 to="/stores" 
-                className={`text-sm font-medium transition-colors hover:text-red-600 ${
-                  location.pathname === '/stores' ? 'text-red-600' : 'text-gray-700'
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                  location.pathname === '/stores' ? 'text-blue-600' : 'text-gray-700'
                 }`}
               >
-                Stores
+                Dentists
               </Link>
               <Link 
                 to="/blog" 
-                className={`text-sm font-medium transition-colors hover:text-red-600 ${
-                  location.pathname === '/blog' ? 'text-red-600' : 'text-gray-700'
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                  location.pathname === '/blog' ? 'text-blue-600' : 'text-gray-700'
                 }`}
               >
                 Blog
@@ -56,7 +56,7 @@ const Header = () => {
             <Button variant="outline" size="sm">
               Write a Review
             </Button>
-            <Button size="sm" className="bg-red-600 hover:bg-red-700">
+            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
               Sign Up
             </Button>
           </div>
@@ -83,8 +83,8 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 to="/" 
-                className={`text-base font-medium transition-colors hover:text-red-600 ${
-                  location.pathname === '/' ? 'text-red-600' : 'text-gray-700'
+                className={`text-base font-medium transition-colors hover:text-blue-600 ${
+                  location.pathname === '/' ? 'text-blue-600' : 'text-gray-700'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -92,17 +92,17 @@ const Header = () => {
               </Link>
               <Link 
                 to="/stores" 
-                className={`text-base font-medium transition-colors hover:text-red-600 ${
-                  location.pathname === '/stores' ? 'text-red-600' : 'text-gray-700'
+                className={`text-base font-medium transition-colors hover:text-blue-600 ${
+                  location.pathname === '/stores' ? 'text-blue-600' : 'text-gray-700'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Stores
+                Dentists
               </Link>
               <Link 
                 to="/blog" 
-                className={`text-base font-medium transition-colors hover:text-red-600 ${
-                  location.pathname === '/blog' ? 'text-red-600' : 'text-gray-700'
+                className={`text-base font-medium transition-colors hover:text-blue-600 ${
+                  location.pathname === '/blog' ? 'text-blue-600' : 'text-gray-700'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -112,7 +112,7 @@ const Header = () => {
                 <Button variant="outline" size="sm" className="w-full">
                   Write a Review
                 </Button>
-                <Button size="sm" className="bg-red-600 hover:bg-red-700 w-full">
+                <Button size="sm" className="bg-blue-600 hover:bg-blue-700 w-full">
                   Sign Up
                 </Button>
               </div>
