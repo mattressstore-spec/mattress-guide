@@ -17,7 +17,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/0ddf429d-234c-469f-943a-6843a3e905e6.png" 
                 alt="LA Mattress Store Reviews"
-                className="h-16 w-auto"
+                className="h-32 w-auto"
               />
             </Link>
           </div>
