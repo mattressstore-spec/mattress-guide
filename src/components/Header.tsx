@@ -14,10 +14,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
-                <Star className="h-5 w-5 text-white fill-current" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">LA Mattress</span>
+              <img 
+                src="/lovable-uploads/b66f2804-0f79-4e6f-b2a8-9d6731b5fd63.png" 
+                alt="LA Mattress Store Reviews"
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
