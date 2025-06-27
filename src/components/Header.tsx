@@ -15,7 +15,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/0ddf429d-234c-469f-943a-6843a3e905e6.png" 
+                src="/lovable-uploads/a52a3bfa-8653-4cb5-ba32-3b651908bbce.png" 
                 alt="LA Mattress Store Reviews"
                 className="h-32 w-auto"
               />
