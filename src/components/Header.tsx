@@ -15,8 +15,8 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
               <img 
-                src="/lovable-uploads/a52a3bfa-8653-4cb5-ba32-3b651908bbce.png" 
-                alt="LA Mattress Store Reviews"
+                src="/lovable-uploads/b1fac950-1c77-4976-beb3-14e45dbde732.png" 
+                alt="LA Mattress Insider"
                 className="h-20 w-auto drop-shadow-sm"
               />
             </Link>
