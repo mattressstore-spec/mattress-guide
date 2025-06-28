@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Search, MapPin, Star } from 'lucide-react';
@@ -17,7 +16,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/a52a3bfa-8653-4cb5-ba32-3b651908bbce.png" 
                 alt="LA Mattress Store Reviews"
-                className="h-18 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>
