@@ -21,7 +21,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Finding The Best Mattress in Los Angeles Starts Here
+              When Los Angeles Mattress Stores Compete, You Win
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
               Discover top-rated mattress stores, read genuine reviews, and make informed decisions for better sleep.
