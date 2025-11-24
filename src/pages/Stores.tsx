@@ -13,6 +13,10 @@ const Stores = () => {
   const [sortBy, setSortBy] = useState('rating');
   const [priceFilter, setPriceFilter] = useState('all');
 
+  React.useEffect(() => {
+    document.title = "Browse Mattress Stores in LA - LA Mattress Stores Guide";
+  }, []);
+
   const filteredStores = sampleStores.filter(store => {
     const matchesSearch = store.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          store.categories.some(cat => cat.toLowerCase().includes(searchTerm.toLowerCase()));
