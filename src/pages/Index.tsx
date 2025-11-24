@@ -12,19 +12,23 @@ const Index = () => {
   const featuredStores = sampleStores.filter(store => store.featured);
   const topStores = sampleStores.slice(0, 3);
 
+  React.useEffect(() => {
+    document.title = "LA Mattress Stores Guide - Compare Prices & Find the Best Deals";
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-orange-500 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-orange-500 text-white py-16" aria-label="Hero section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               When Los Angeles Mattress Stores Compete, You Win
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Discover top-rated mattress stores, read genuine reviews, and make informed decisions for better sleep.
+              Let LA mattress stores compete so you get the best price.
             </p>
           </div>
           
@@ -51,10 +55,10 @@ const Index = () => {
       </section>
 
       {/* Featured Stores */}
-      <section className="py-16">
+      <section className="py-16" aria-labelledby="featured-stores">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Featured Mattress Stores</h2>
+            <h2 id="featured-stores" className="text-3xl font-bold text-gray-900">Featured Mattress Stores</h2>
             <Link to="/stores">
               <Button variant="outline" className="flex items-center space-x-2">
                 <span>View All Stores</span>
@@ -72,9 +76,9 @@ const Index = () => {
       </section>
 
       {/* Top Rated Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" aria-labelledby="top-rated-stores">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Top Rated Stores</h2>
+          <h2 id="top-rated-stores" className="text-3xl font-bold text-gray-900 mb-8 text-center">Top Rated Stores</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {topStores.map((store) => (
@@ -114,10 +118,10 @@ const Index = () => {
       </section>
 
       {/* Blog Preview */}
-      <section className="py-16">
+      <section className="py-16" aria-labelledby="blog-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Latest Sleep Tips & Guides</h2>
+            <h2 id="blog-section" className="text-3xl font-bold text-gray-900">Latest Sleep Tips & Guides</h2>
             <Link to="/blog">
               <Button variant="outline" className="flex items-center space-x-2">
                 <span>Read More Articles</span>
@@ -154,11 +158,11 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">LA Mattress</h3>
+              <h3 className="text-lg font-semibold mb-4">LA Mattress Stores Guide</h3>
               <p className="text-gray-400">Your trusted guide to finding the perfect mattress store in Los Angeles.</p>
             </div>
             <div>
@@ -183,7 +187,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 LA Mattress Directory. All rights reserved.</p>
+            <p>&copy; 2024 LA Mattress Stores Guide. All rights reserved.</p>
           </div>
         </div>
       </footer>

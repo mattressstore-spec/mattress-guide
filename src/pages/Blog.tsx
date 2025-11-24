@@ -8,6 +8,10 @@ import { sampleArticles } from '@/data/sampleData';
 import { Calendar, Clock, User } from 'lucide-react';
 
 const Blog = () => {
+  React.useEffect(() => {
+    document.title = "Sleep Tips & Mattress Buying Guides - LA Mattress Stores Guide";
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
